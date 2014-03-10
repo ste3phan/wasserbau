@@ -30,6 +30,8 @@ beta=0.90
 files = os.listdir(datadir)
 processfile=0
 
+print "Processing..."
+
 # processes all files in datadir
 for processfile in files:
 
@@ -39,7 +41,7 @@ for processfile in files:
     writer = csv.writer(ofile, delimiter=';')
     
     daten=[]
-    
+
     for lines in reader:
         lineNum = 1
         # lineNum should be maximum line numbers of input files with standard value of 360
@@ -69,3 +71,4 @@ for processfile in files:
    
     ifile.close()
     ofile.close()
+print "Done."
